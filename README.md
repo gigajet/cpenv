@@ -3,36 +3,34 @@
 
 Toolkits to write Competitive Programming code
 
-[Binary](https://github.com/gigajet/cpenv/releases) built for Windows 7 PC
+## WTF is included
 
-## Consist of
+templates - of course
 
-[fts](https://github.com/gigajet/fts) - Automatic tester. They are `fts.exe`, `ftest.exe`, `cmp.exe` files.
+[srm](https://github.com/gigajet/srm) - we can include many files in local, then merge into one "submit.cpp" when we need to submit.
 
-cp.bat - Main interface. Interact with this file.
+Problem design (pattern?)
 
-## Support
+## WTF is assumed
 
-C++
++ C++ / VSCode / Windows
+
++ Python3 installed
 
 ## Why (the story)
 
-Time is precious, especially during critical contests.
+Templates, obviously, makes code-writing faster.
 
-Attention is expensive, especially during critical thinking.
+With srm, one can write codes in many files, so bring forth your ICPC-notebook LOL.
 
-Yet when I change a variable or change a colon, I *wait* for compilation to complete then go back and forth to copy test cases into input file, run the program, and eyeball the output file to compare with sample output.
-
-When I have multiple test cases (some of them are hand-generated), I found myself copy and paste over and over, then eyeball the result again and again.
-
-I should tell the computer to compile, run and compare the result automatically. If I am wrong, it reports which sample test. All within a few keystrokes.
+(Still in emphirical testing phase) Problem design not-a-pattern helps one break the problem into many sub-problem and write them in modular way without worrying about variable name clashing. (Sort of a pipeline implemented by a stringstream as efficency price.) (more about this later)
 
 ## Workflow
 
-Write code into `main.cpp`. Good editor preferred. Ensure no compilation error.
+Write code into `sol.cpp`. Feel free to create headers (such as `MaxFlow.h`, `String.h` or your whole ICPC-Notebook) and include them.
 
-Copy input of same test cases into i0, i1, i2... (without extension). If prefer i0.txt, i1.txt, change cp.bat
+Invoke `b` (which is a [make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm) in disguise) to compile the code.
 
-Copy respective outputs into o0, o1, o2...
+Invoke `r` to run the code
 
-Invoke `cp c`. That's all.
+When you need to submit, invoke `b s` then submit `submit.cpp`.

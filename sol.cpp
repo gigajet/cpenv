@@ -2,9 +2,9 @@
 #define ONLINE_JUDGE
 struct MainProblem : public Problem {
     int a,b;
-    void solve () {
-        *this >> a >> b;
-        *this <<3<<"\n";
+    void main () {
+        cin >> a >> b;
+        cout <<a+b<<"\n";
     }
 };
 
@@ -20,6 +20,5 @@ int main() {
     fin.close();
     #endif
 
-    prob.solve();
-    std::cout << prob;
+    std::cout << prob.solve();
 }

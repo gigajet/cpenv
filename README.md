@@ -7,7 +7,7 @@ Toolkits to write Competitive Programming code
 
 templates - of course
 
-[srm (Python version)](https://github.com/gigajet/srm) - we can include many files in local, then merge into one "submit.cpp" when we need to submit.
+srm (Python version) - we can include many files in local, then merge into one "submit.cpp" when we need to submit.
 
 Problem design (pattern?)
 

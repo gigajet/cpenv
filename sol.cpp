@@ -1,4 +1,5 @@
 #include "template.h"
+#include "problem.h"
 #define ONLINE_JUDGE
 struct MainProblem : public Problem {
     int a,b;
